@@ -1,0 +1,5 @@
+primary-color: #03a75d / filter: invert(44%) sepia(32%) saturate(5102%) hue-rotate(129deg) brightness(94%) contrast(98%)
+alternative-color: #6E77FF / filter: invert(39%) sepia(92%) saturate(704%) hue-rotate(207deg) brightness(104%) contrast(101%)
+
+primary-font: Montserrat
+
