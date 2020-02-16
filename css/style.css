@@ -8,8 +8,13 @@ html, body{
     font-family: Montserrat, sans-serif;
     font-size: 2vh;
     font-weight: 300;
-    color: #2e2e2e;
-    background-color: #ddf1e8;
+    /* background-color: #ddf1e8; */
+    background-color: #2e2e2e;
+    
+}
+h1,h2,h3,p,a{
+    color: #ebebeb;
+    line-height: 4vh;
 }
 
 h1{
@@ -25,44 +30,6 @@ h2{
 }
 
 
-input, #contact-message{
-    width: 100%;
-    padding: 1.2rem 1.6rem;
-    border: none;
-    border-left: 0.2rem solid black;
-    font-family: Montserrat;
-    font-size: 1rem;
-    font-weight: 300;
-    background-color: transparent;
-    outline: none;
-    transition: all 200ms ease-in-out;
-}
-#contact-message{
-    resize: none;
-    
-}
-#contact-message:focus, input[type=email]:focus{
-    
-    border-color: #03a75d;
-}
-input[type=submit]{
-    width: auto;
-    padding: 0.3rem 1rem;
-    border-radius: 5px;
-    border: 0.2rem solid #03a75d;
-    background-color: #03a75d;
-    color: #ddf1e8;
-    font-weight: 500;
-    transition: all 100ms ease-in-out;
-    
-}
-input[type=submit]:hover{
-    cursor: pointer;
-    background-color: #ddf1e8;
-    color: #03a75d;
-}
-
-
 body{
     display: flex;
     justify-content: center;
@@ -74,18 +41,24 @@ body{
     width: 40vw;
 
     display: grid;
-    grid-template-rows: 5% 1fr 1fr 10%;
+    grid-template-rows: 5% 1fr 5%;
     
     grid-row-gap: 10%;
     row-gap: 10%;
 
     grid-template-columns: 100%;
-    grid-template-areas: "navigation-section"
+    grid-template-areas: "."
                         "presentation-section"
-                        "contact-section"
-                        "links-section";
+                        ".";
+                    
 
     align-content: space-between;
+}
+
+@media only screen and (max-width: 768px){
+    .page-container{
+        width: 100vw;
+    }
 }
 
 #navigation{
@@ -119,8 +92,8 @@ body{
     grid-area: presentation-section;
 
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-evenly;
+    flex-flow: column nowrap;
+    justify-content: space-around;
     align-items: center;
 }
 .logo{
@@ -133,9 +106,9 @@ body{
     background-size: 360px 240px;
 }
 .presentation-text{
-    height: 100%;
+    height: 50%;
     width: 60%;
-    text-align: right;
+    text-align: center;
     font-size: 1.1rem;
     line-height: 1.8rem;
     display: flex;
@@ -144,34 +117,17 @@ body{
     
 }
 
-#contact{
-    grid-area: contact-section;
-
+.links{
     display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-between;
+    flex-flow: row nowrap;
+    justify-content: center;
     align-items: center;
-}
-.message-form{
-    width: 75%;
-    height: 80%;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-between;
-    align-items: center;
-}
-
-#links{
-    grid-area: links-section;
-
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-between;
-    align-items: center;
+    height: 50%;
+    width: 100%;
 }
 
 .external-links{
-    width: 40%;
+    width: 35%;
     height: 60%;
     display: flex;
     flex-flow: row nowrap;
@@ -179,14 +135,14 @@ body{
     align-items: center;
 }
 .external-links li, .external-links a{
-    height: 100%;
+    height: 60%;
 }
 
 .external-links a{
     background-size: 1.7rem;
     display: inline-block;
     color: transparent;
-
+    filter: invert(100%);
     transition: all 100ms ease-in;
 }
 .external-links a:hover{
