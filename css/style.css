@@ -1,6 +1,6 @@
 html, body{
-    min-height: 100vh;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
     
     font-family: Montserrat, sans-serif;
     line-height: 4vh;
@@ -21,41 +21,67 @@ h1{
 }
 
 body{
+    display: -ms-grid;
     display: grid;
-    grid-template-rows: 10% 2fr 1fr 10%;
-    grid-template-columns: 20% 1fr 20%;
+    -ms-grid-rows: 10vh 2fr 1fr 10vh;
+    grid-template-rows: 10vh 2fr 1fr 10vh;
+    -ms-grid-columns: 20vw 1fr 20vw;
+    grid-template-columns: 20vw 1fr 20vw;
     
 
-    grid-template-areas: ". . ." ". presentation-section ." ". links-section ." ". . .";
+        grid-template-areas: ". . ." ". presentation-section ." ". links-section ." ". . .";
                     
 
-    align-content: space-evenly;
+    -ms-flex-line-pack: space-evenly;
+                    
+
+        align-content: space-evenly;
     justify-items: center;
 }
 
 .presentation-text{
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
     grid-area: presentation-section;
     justify-self: left;
     align-self: center;
 
     width: 60%;
 
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
     display: flex;
-    flex-flow: column nowrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
     
 }
 
 
 .links{
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
     grid-area: links-section;
     justify-self: left;
     align-self: end;
     
     min-width: 30%;
 
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     
 }
 
@@ -66,11 +92,16 @@ body{
     
     color: transparent;
 
-    filter: invert(100%);
+    -webkit-filter: invert(100%);
+
+            filter: invert(100%);
+    -webkit-transition: all 100ms ease-in;
+    -o-transition: all 100ms ease-in;
     transition: all 100ms ease-in;
 }
 .links a:hover{
-    filter: invert(44%) sepia(32%) saturate(5102%) hue-rotate(129deg) brightness(94%) contrast(98%);
+    -webkit-filter: invert(44%) sepia(32%) saturate(5102%) hue-rotate(129deg) brightness(94%) contrast(98%);
+            filter: invert(44%) sepia(32%) saturate(5102%) hue-rotate(129deg) brightness(94%) contrast(98%);
 }
 
 .github-link{
@@ -96,7 +127,8 @@ body{
 
 @media only screen and (max-width: 768px){
     body{
-        grid-template-columns: 10% 1fr 10%;
+        -ms-grid-columns: 10vw 1fr 10vw;
+        grid-template-columns: 10vw 1fr 10vw;
     }
     .presentation-text{
         width: 100%;
