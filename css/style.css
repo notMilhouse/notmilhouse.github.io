@@ -4,7 +4,7 @@ html, body{
     
     font-family: Montserrat, sans-serif;
     line-height: 4vh;
-    background-color: #2e2e2e;
+    background-color: #1a1a1a;
     
 }
 p,a{
@@ -14,9 +14,9 @@ p,a{
 }
 
 h1{
-    font-size: 3vh;
-    font-weight: 600;
-    color: #03a75d;
+    font-size: 10vh;
+    font-weight: bold;
+    color: #00E78E;
     padding-bottom: 1em;
 }
 

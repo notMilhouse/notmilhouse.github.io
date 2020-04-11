@@ -1,5 +1,11 @@
-primary-color: #03a75d / filter: invert(44%) sepia(32%) saturate(5102%) hue-rotate(129deg) brightness(94%) contrast(98%)
+primary-color: #00E78E / filter: invert(78%) sepia(41%) saturate(6447%) hue-rotate(112deg) brightness(104%) contrast(102%);
 alternative-color: #6E77FF / filter: invert(39%) sepia(92%) saturate(704%) hue-rotate(207deg) brightness(104%) contrast(101%)
 
 primary-font: Montserrat
 
+cores
+	#1a1a1a // dark gray
+	#00E78E // bright green
+	#26c486 // calmer green
+	#03a75d // dark green
+	#6E77FF // purpleish blue
