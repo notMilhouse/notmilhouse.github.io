@@ -9,3 +9,29 @@ cores
 	#26c486 // calmer green
 	#03a75d // dark green
 	#6E77FF // purpleish blue
+
+
+
+<!-- <div id="navigation">
+            <ul class="navigation-links">
+                <li><a class="navigation-link" href="">Home</a></li>
+                <li><a class="navigation-link" href="">Blog</a></li>
+                <li><a class="navigation-link" href="">Services</a></li>
+                <li><a class="navigation-link" href="">Projects</a></li>
+            </ul>
+        </div> -->
+
+
+        <!-- <div class="presentation-text">
+            <h1>Hi, I am Gabriel Carvalho.</h1>
+            <p>I got into programming by the age 13, when I learned Turbo Pascal. I then studied a bit of C++ and later jumped in front-end development. Now, I am currently looking for opportunities to build a portifolio and improve my skills.</p>
+            <p>Some solutions and ideas are shared on Github and Codepen, as well as my design projects on Behance. You can also follow my LinkedIn account for information on my curriculum and skills.</p>
+            <p>I am also passionate about computing, math problems, philosophy and folk music.</p>
+        </div>
+
+        
+        <ul class="links">
+            <li><a class="github-link" href="https://github.com/notMilhouse" target="_blank">gith</a></li>
+            <li><a class="codepen-link" href="https://codepen.io/notMilhouse" target="_blank">code</a></li>
+            <li><a class="linkedin-link" href="https://www.linkedin.com/in/gabriel-carvalho-silva-2000" target="_blank">linke</a></li>
+        </ul> -->
