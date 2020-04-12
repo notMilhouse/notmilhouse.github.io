@@ -20,12 +20,19 @@ h1{
     color: #00E78E;
     
 }
+h2{
+    font-size: 3vh;
+    line-height: 4vh;
+    font-weight: bold;
+    color: #00E78E;
+    
+}
 
 body{
     display: -ms-grid;
     display: grid;
     -ms-grid-rows: 10vh 2fr 1fr 10vh;
-    grid-template-rows: 10vh 2fr 1fr 10vh;
+    grid-template-rows: 10vh 5fr 1fr 10vh;
     -ms-grid-columns: 20vw 1fr 20vw;
     grid-template-columns: 20vw 1fr 20vw;
     
@@ -130,8 +137,8 @@ p a:hover{
 
 @media only screen and (max-width: 768px){
     body{
-        -ms-grid-columns: 10vw 1fr 10vw;
-        grid-template-columns: 10vw 1fr 10vw;
+        -ms-grid-columns: 5vw 1fr 5vw;
+        grid-template-columns: 5vw 1fr 5vw;
     }
     .presentation-text{
         width: 100%;
