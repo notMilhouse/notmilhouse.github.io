@@ -135,6 +135,8 @@ p a:hover{
 }
 
 
+
+
 @media only screen and (max-width: 768px){
     body{
         -ms-grid-columns: 5vw 1fr 5vw;
