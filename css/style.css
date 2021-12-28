@@ -26,7 +26,7 @@
 */
 
 :root {
-    --main-bg-color: #f9f5d7;
+    --main-bg-color: #d7d2b2;
     --main-highlight-color: #b16286;
     --main-text-color: #332C23;
     --secondary-highlight-color: #8f3f71;
@@ -38,36 +38,45 @@ html, body{
     width: 100%;
     
     font-family: 'Fira Mono', sans-serif;
-    font-size: 20px;
+    /*using vh doesnt allow for proper zooming, how the fuck to do this properly
+    using px also breaks the layout due to some weird grid shit*/
+    font-size: 2.1vh;
     line-height: 4rem;
     background-color: var(--main-bg-color);
     
 }
-p,a{
+a{
+    color: var(--main-text-color);
+    padding: 0.2rem 0 0.2rem 0;
+}
+
+p {
+    font-size: 1rem;
     color: var(--main-text-color);
     padding: 0.5rem 0 0.5rem 0;
+
 }
 
 h1{
-    font-size: 3rem;
+    font-size: 2.2rem;
     font-weight: bold;
     color: var(--main-highlight-color);
 }
 
 h2{
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: bold;
     color: var(--main-highlight-color);
 }
 
 h3{
-    font-size: 1rem;
+    font-size: 1.3rem;
     font-weight: bold;
     color: var(--main-highlight-color);
 }
 
 h4{
-    font-size: 0.8rem;
+    font-size: 1.1rem;
     color: var(--secondary-highlight-color);
 }
 
@@ -171,6 +180,10 @@ a:hover {
 
 .side-nav li {
     text-align: right;
+}
+
+.side-nav a {
+    font-weight: 800;
 }
 
 .side-nav a:hover {
