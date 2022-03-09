@@ -47,7 +47,7 @@ html, body{
 }
 a{
     color: var(--main-text-color);
-    padding: 0.2rem 0 0.2rem 0;
+    padding: 0.2rem 0 0.2rem 0; 
 }
 
 p {
@@ -89,9 +89,6 @@ h4{
     display: grid;
     -ms-grid-rows: 5vh 1fr 5vh;
     grid-template-rows: 5vh 1fr 5vh;
-
-    -ms-grid-row-gap: 1rem;
-    grid-row-gap: 5vh;
 
     -ms-grid-columns: 15vw 1fr 20vw 15vw;
     grid-template-columns: 15vw 1fr 20vw 15vw;
