@@ -1,0 +1,220 @@
+:root {
+    --main-bg-color: #D2D2D2;
+    --main-highlight-color: #8F3D85;
+    --main-text-color: #2D2D2D;
+    --secondary-highlight-color: #AC6FA4;
+    --secondary-background-color: #E5E5E5;
+}
+
+html, body {
+    height: 100vh;
+    width: 100vw;
+    
+    font-family: 'Barlow Condensed', sans-serif;
+
+    font-size: 2vh;
+    line-height: 1.7rem;
+    background-color: var(--main-bg-color);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}  
+
+h1 {
+    line-height: 2.5rem;
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--main-highlight-color);
+}
+
+h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--main-highlight-color);
+}
+
+h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--main-text-color);
+}
+
+p {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--main-text-color);
+}
+
+a {
+    font-size: 1rem;
+    font-weight: 400;
+    text-decoration: underline;
+    color: var(--main-highlight-color);
+}
+
+a:hover {
+    color: var(--secondary-highlight-color);
+}
+
+img {
+    display: block;
+    width: 90%;
+}
+
+.page-container {
+    height: 100%;
+    width: 100%;
+    max-width: 500px;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50% 6% 35%;
+    row-gap: 2%;
+
+    grid-template-areas: 
+        "apresentacao"
+        "doacoes"
+        "descricao";
+
+    justify-items: center;
+    align-items: center;
+}
+
+section {
+    height: 100%;
+    width: 90%;
+}
+
+.apresentacao {
+    grid-area: apresentacao;
+
+    display: grid;
+
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: 2fr 1fr;
+
+    grid-template-areas: 
+        "mypic calltoaction"
+        "presentation flags";
+
+    align-items: center;
+    justify-content: center;
+
+}
+
+.mypic {
+    grid-area: mypic;
+    width: 90%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mypic img {
+    border-radius: 100%;
+}
+
+.calltoaction {
+    grid-area: calltoaction;
+
+    height: 60%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.presentation {
+    grid-area: presentation;
+    display: flex;
+    flex-flow: column nowrap;
+}   
+
+.flags {
+    grid-area: flags;
+
+    height: 100%;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: flex-end;
+}
+
+.flags img {
+    border-radius: 0.5rem;
+}
+
+.doacoes {
+    grid-area: doacoes;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+
+    background-color: var(--secondary-background-color);
+}
+
+.descricao {
+    grid-area: descricao;
+
+    height: 100%;
+
+    display: flex;
+    flex-flow: row nowrap;
+
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.listagem {
+    width: 50%;
+
+    display: flex;
+    flex-flow: column nowrap;
+    
+}
+
+.listagem ul {
+    list-style: square;
+    align-self: center;
+}
+
+.pix {
+    height: 100%;
+    width: 50%;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pix img {
+    border-radius: 1rem;
+}
+
+.cpy-btn {
+    display: block;
+    background-color: var(--secondary-highlight-color);
+    border-radius: 0.2rem;
+}
+
+.cpy-btn .cpy-btn-text {
+    padding: 0.3rem;
+    color: var(--main-bg-color);
+}
+
+.cpy-btn:hover {
+    background-color: var(--main-highlight-color);
+    cursor: pointer;
+}
+
