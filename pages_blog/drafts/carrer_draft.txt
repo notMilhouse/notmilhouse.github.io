@@ -1,0 +1,6 @@
+<p>
+                Currently I am an intern at IEA - USP. There, we impact education throughout the country, and to make that possible, we have a team responsible for data analysis and engineering. As part of that team I have been working on improving databases architecture as well as implementing integration and devops systems.
+            </p>
+            <p>
+                Before that I had been for 2 years a software engineering intern at iFood, from which experience I am now able to contribute a lot in my current internship.
+            </p>
