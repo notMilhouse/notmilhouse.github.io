@@ -43,7 +43,7 @@ html, body{
     font-size: 2vh;
     line-height: 4.5vh;
     background-color: var(--main-bg-color);
-    
+    text-align: justify;
 }
 a{
     color: var(--main-text-color);
@@ -126,10 +126,9 @@ main {
 }
 
 .picture {
-    width: 30%;
-    height: 70%;
+    width: 20vw;
+    height: 20vw;
     box-shadow: 0 0.1rem 0.2rem 0 rgba(0, 0, 0, 0.2), 0 0.15rem 1rem 0 rgba(0, 0, 0, 0.19);
-    max-width: 20vw;
 }
 
 .picture img {
@@ -140,13 +139,17 @@ main {
 
 @media screen and (max-width: 480px) {
     main {
-        flex-flow: column nowrap;
-        width: 100%;
+        flex-flow: column-reverse nowrap;
+        width: 80%;
+    }
+    header {
+        width: 80%;
     }
     .content {
-        width: 80%;
+        width: 100%;
     }
     .picture {
-        width: 80%;
+        width: 80vw;
+        height: 80vw;
     }
 }
