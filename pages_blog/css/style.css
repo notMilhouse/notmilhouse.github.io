@@ -141,6 +141,10 @@ main {
 @media screen and (max-width: 480px) {
     main {
         flex-flow: column nowrap;
+        width: 60%;
+    }
+    .content {
+        width: 80%;
     }
     .picture {
         width: 80%;
