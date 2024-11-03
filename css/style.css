@@ -53,14 +53,14 @@ a{
 
 .menu li > a {
     color: #ebebeb;
-    background-color: #0a3876;
+    background-color: var(--main-highlight-color);
     padding: 0 0.2rem 0 0.2rem;
 
     transition: ease-in-out 0.1s;
 }
 .menu li > a:hover {
     color: #ebebeb;
-    background-color: rgb(66, 89, 156);
+    background-color: var(--secondary-highlight-color);
 
     transition: ease-in-out 0.1s;
 }
