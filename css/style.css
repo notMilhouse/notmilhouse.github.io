@@ -13,7 +13,7 @@ html, body{
     font-size: 2vh;
     
     background-color: var(--main-bg-color);
-    text-align: justify;
+    text-align: left;
 }
 
 h1{
@@ -109,6 +109,10 @@ header {
 
 .menu li {
     padding: 0.5rem 0 0.5rem 0;
+}
+
+.post-index {
+    padding: 0 1rem 1rem 1rem;
 }
 
 .content {

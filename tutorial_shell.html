@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/reset.css">
+    <link href="https://fonts.googleapis.com/css?family=Fira Mono" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+
+
+    <title>Gabriel Carvalho Silva</title>
+    
+</head>
+
+<body>
+    <main>
+        <header>
+            <ul class="menu">
+                <li><a href="index.html">home</a></li>
+                <li><a href="about.html">whoami</a></li>
+                <li><a href="blog.html">blog</a></li>
+                <li><a href="contact.html">contact me</a></li>
+                <li><a href="outreach.html">outreach & community</a></li>
+                <li><a target="_blank" href="https://www.youtube.com/@umgabrielcarvalho">youtube</a></li>
+                <li><a target="_blank" href="resources/resume_gabriel_carvalho_silva.pdf">resume</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="text">
+                <h1>Tutorial de Shell - Edição Installfest</h1>
+                <h2>Índice</h2>
+                <ol class="post-index">
+                    <li><a href="#introducao">Introdução</a></li>
+                    <li><a href="#termos">Terminal, prompt, linha de comando, shell, tantos nomes...</a></li>
+                    <li><a href="#shell">O Shell</a></li>
+                    <li><a href="#uso">Utilizando o Shell</a></li>
+                    <li><a href="#scripting">Shell scripting</a></li>
+                    <li><a href="#programas">Programas, pacotes e gerenciadores de pacotes</a></li>
+                </ol>
+
+                <div id="introducao">
+                    <h3>Introdução</h3>
+
+                    <p>
+                        Quando conversamos com outras pessoas, utilizamos alguma língua. Essa língua, seja ela qual for, possui regras gramaticais, mas mais importante que isso, fornece vocabulário para expressar ideias, ações, objetos, etc.
+                    </p>
+
+                    <p>
+                        Esses elementos, aliados a uma boa articulação da gramática, possibilitam a comunicação entre pessoas e realização de tarefas em grupo, por exemplo.
+                    </p>
+
+                    <p>
+                        Inspirado nesse aspecto da nossa realidade, soluções tecnológicas seguem uma lógica muito parecido para criar uma ponte entre usuário e ferramenta (nesse caso, o computador).
+                    </p>
+
+                    <p>
+                        O computador foi criado como uma ferramenta para realizar diferças tarefas. Inicialmente tarefas ligadas a pesquisa e ciência, mas atualmente até lazer.
+                    </p>
+
+                    <p>
+                        Em suas primeiras versões, a interface de comunicação com um computador consistia de alavancas e botões para configurar como ele funcionária, e diferentes configurações de estados dessas peças geraravam resultados diferentes.
+                    </p>
+
+                    <p>
+                        Conforme o computador foi evoluindo, se tornando apto a tarefas mais complexas, interfaces que abstraíssem essa complexidade se tornaram necessárias. 
+                    </p>
+
+                    <p>
+                        Para abstrair a camada física do computador, sistemas operacionais foram criados a fim de automatizar a gestão dos recursos de memória e processamento, por exemplo. Dessa forma, "em cima" do sistema operacional, algumas interfaces são implementadas para facilitar a utilização desses recursos por meio do SO.
+                    </p>
+                    <p>
+                        No caso do Linux, acima do Kernel (parte central do sistema responsável pela gestão dos recursos), está disponível uma coleção de chamadas de sistema que pode ser utilizada por programas para se comunicar com o SO. Essas chamadas de sistema são encapsuladas, por exemplo, pela biblioteca padrão da linguagem C. Permitindo que programas sejam escritos utilizando as funções dessa biblioteca.
+                    </p>
+                    <p>
+                        Para utilizar o SO e por fim a máquina, existe um programa que é executado por padrão na maioria dos sistemas Linux que se chama Shell. Shell significa concha, e tal qual uma concha, é como se o Shell encapsulasse, ou melhor, contivesse o sistema operacional por meio de comandos específicos. 
+                    </p>
+
+                    <div class="picture">
+                        <img src="resources/shell_diagram.png" style="object-fit:contain" alt="Diagram of where the Shell stands in the communication flow between user and the machine">
+                    </div>
+
+                    <p>
+                        O Shell é o que chamamos de uma interface por linha de comando (CLI) ou interface baseada em texto. Existem também interfaces gráficas (GUI) que costumam ser mais intuitivas para usuários novatos, porém mais limitadas para o interesse de usuários mais técnicos. Tal qual um clique pode significar a seleção de um arquivo ou fechar uma janela quando ocorre em cima de um ícone específico, em uma CLI comandos específicos realizam ações similares para alcançar os mesmos objetivos finais.
+                    </p>
+
+                    <p>
+                        Além disso, o Shell também é o nome que se dá a linguagem shell, muito utilizada para escrevar programas utilitários para o sistema.
+                    </p>
+
+                    <p>
+                        Nesse artigo vamos aprender sobre o shell, um pouco de como o Linux gerencia os programas disponíveis e como escrever scripts shell para criar utilitários simples. Apesar de introdutório, esse tutorial deveria ser suficiente para te ensinar os fundamentos necessários para começar o caminho na computação de forma com algumas vantagens.
+                    </p>
+
+                </div>
+                <div id="termos">
+                    <h3>Terminal, prompt, linha de comando, shell, tantos nomes...</h3>
+                    <p>
+                        Com tantos termos, é fácil se perder. Então, de forma muito muito simples: Pense no terminal como uma janela onde você consegue ver a execução de outros programas, por exemplo o Shell. Essencialmente o terminal é um programa com interface gráfica e permite que você interaja com algum Shell.
+                    </p>
+                    <p>
+                        Linha de comando é o nome genérica para CLIs, e exemplos de CLIs são o promp de comando (cmd) do Windows, Shell do Linux ou MacOS ou o PowerShell também do Linux. 
+                    </p>
+                    <p>
+                        Exemplos de terminal são o Terminal do Windows, gnome-terminal da interface gráfica GNOME do linux e o Terminal (muito muito criativos não é mesmo) do MacOS. Existem outros terminais mais completos, com outras funcionalidades, como por exemplo o Terminator, que permite a execução de diversas sessões ao Shell.
+                    </p>
+
+                    <p>
+                        Você talvez já deve ter escutado o termo "bash". O Bash é uma versão do Shell, e existem várias. Eu pessoalmente uso o zsh, por ser mais moderno e possuir muitas opções de customização visual (afinal deixar o terminal colorido é bem legal).
+                    </p>
+                </div>
+                <div id="shell">
+                    <h3>O Shell</h3>
+                    <p>
+                        Independente de qual Shell utilize, o básico se mantém o mesmo. Aqui vou abordar o bash, por ser o padrão na maioria das distribuições Linux. Mas, após esse tutorial, você estará apto(a) a ler a documentação de outras versões.
+                    </p>
+
+                    <p>
+                        Vamos então aprender a utilizar o Shell para navegar pela estrutura de arquivos do nosso sistema Linux, manipular diretórios (normalmente chamados de pastas em interfaces gráficas) e arquivos e bom... basicamente é só isso que fazemos num computador se você parar pra pensar. Mas, nesse caso, ao invés de vários cliques, vamos ver como ser eficientes com comandos básicos do Shell.
+                    </p>
+
+                    <h4>Navegando o sistema</h4>
+                    
+                    <p>Ao abrir o terminal verá algo assim aparecendo:</p>
+
+                    <div class="picture">
+                        <img src="resources/shell_intro.png">
+                    </div>
+
+                    <p>
+                        Esse texto com as informações mostradas na imagem é o que chamamos de promp to shell. Basicamente é um texto fixo que mostra algumas informações uteis e a partir de onde voce digita comandos e observa resultados.
+                    </p>
+
+                    <p>
+                        Um comando simples no Shell se parece com isso:
+                    </p>
+                    
+                    <div class="picture">
+                        <img src="resources/shell_sample.png">
+                    </div>
+
+                    <p>
+                        Usamos o comando "cd", que significa "change directory", ou "mude de diretório", para navegar entre as pastas do sistema a partir do diretório local.
+                    </p>
+                
+                    <p>
+                        Assim como em interfaces gráficas temos botões, títulos de janelas e outras coisas, na CLI do Shell, temos algumas informações uteis. Por padrão teremos algo assim: [usuario][maquina]:[diretório]$. E, literalmente, cada campo expressa o que se espera, o nome do usuário que fez log in na máquina em questão, e então em qual diretório estamos.
+                    </p>
+
+                    <p>
+                        Ao utilizar o comando "ls", conseguimos ver o que temos nesse diretório atual e ao usar o comando "cd" acompanhado do nome do diretório para onde queremos ir, alteramos o diretório atual e portanto o contexto de execução dos comandos. Ou seja, se executarmos novamente o comando "ls", o resultado será referente ao novo diretório onde estamos agora.
+                    </p>
+                    <p>
+                        O comando cd pode receber caminhos absolutos, ou seja, o caminho completo do diretório que desejamos visitar a partir da raiz do sistema (que representamos por "/"), ou caminhos relativos ao diretório atual. Se queremos acessar algum diretório dentro do atual, basta colocar o nome dele, ou o caminho até ele a partir do diretório atual. Se queremos "voltar", podemos utilizar então o diretório especial ".." que representa o diretório anterior, qualquer que seja. Dessa forma o Shell torna muito prático navegar mesmo sem saber de cor as pastas, ou diretórios que temos.
+                    </p>
+                    <p>
+                        O comando ls também pode receber como argumento um caminho absoluto ou relativo e então mostrar o que existe lá, algo muito útil para "peak", ou melhor "espiar", outros diretórios sem precisar sair de onde estamos.
+                    </p>
+
+                    <h4>A raíz, a estrutura básica de arquivos Linux, a Home e gerenciamento de diretórios.</h4>
+
+                    <p>
+                        O Linux possui uma estrutura de arquivos padrão muito intuitiva. Tudo começa no "/", a partir dele temos alguns diretórios padrão.
+                    </p>
+                    
+                    <p>
+                        Cada um desses diretórios possui alguma utilidade para o sistema, em "bin" encontramos os binários, ou melhor, os programas executáveis do nosso sistema. É parecido com o "Arquivos de programas" do Windows, mas não exatamente a mesma coisa. O diretório "dev" se referece aos "devices", ou "dispositivos", conectados ao sistema, por exemplo seu teclado e mouse. Não vamos entrar em detalhes no porque e como o Linux organiza essas coisas, mas é importante por agora entender que esses diretórios possuem algum significado para o sistema operacional.
+                    </p>
+                    <p>
+                        O diretório "home" guarda os arquivos de cada usuário. Cada usuário possui uma pasta dentro de "home".
+                    </p>
+
+                    <p>
+                        Dentro do diretório do usuário temos então arquivos exclusivos àquele usuário, como suas configurações, seus arquivos, programas instalados apenas para o usuário, etc. Esse diretório é representado como home do usuário pelo símbolo "~" e é normalmente o diretório padrão quando uma sessão do Shell se inicia.
+                    </p>
+
+                    <p>
+                        Com essa base, estamos prontos para manipular diretórios.
+                    </p>
+
+                    <h4>Organizando um projeto</h4>
+
+                    <div class="picture">
+                        <img src="resources/shell_sequence.png" style="object-fit:contain">
+                    </div>
+
+                    <p>Digamos que você precise fazer um trabalho da faculdade, normalmente criaria uma pasta clicando com botão direito... etc etc etc.</p>
+
+                    <p>Aqui, a partir do diretório home do seu usuário (se você se perdeu, basta executar "cd" sem argumento algum que ele voltará para o "~"), vamos executar o comando "mkdir" ("make directory", ou "crie/faça um diretório") e passar o nome da nossa pasta (diretório). Por exemplo, "exemplo_de_pasta_ou_diretorio"</p>
+
+                    <p>Agora usamos o comando "ls" para ver que está lá e o comando "cd "exemplo_de_pasta_ou_diretorio" para acessar a pasta.</p>
+                    
+                    <p>
+                        Existem diversos comandos presentes no shell, e podemos instalar mais programas. Na verdade, os comandos são também programas que o Shell chama e executa. Esses programas estão registrados na configuração do Shell, dessa forma ele consegue os encontrar e executar, e podemos também registrar nosso próprios programas nessa configuração do sistema para executar apenas com o nome deles, como fizemos com "echo", e outros.
+                    </p>
+
+                    <p>
+                        Ainda que existam diversos comandos, e para isso recomendo fortemente algum guia de consulta de comandos linux, já vimos os pontos principais relacionados ao uso do Shell. Comandos podem ou não receber argumentos (como o texto que inserimos para aparecer na tela ou para escrever no arquivo) e opções (que normalmente são precedidos por - ou --).
+                    </p>
+                    
+                    <p>
+                        Então usar o Shell é basicamente isso, ter em mente uma série de comandos e um manual de referência por perto (hoje em dia o chatgpt é incrível pra isso, mas uma lista impressa na parede é bem mais charmosa na minha opinião).
+                    </p>
+                </div>
+                <div id="scripting">
+                    <h3>Shell scripting</h3>
+                    <p>Agora que aprendemos a como usar o Shell de forma interativa, ou seja, passando comandos e aguardando respostas, vamos aprender como utilizar a linguagem do Shell para escrever scripts de automação, para por exemplo, organizar arquivos em uma pasta em várias pastas.</p>
+                    <p>Scripts desse tipo são muito utilizados para criar scripts de configuração automática de máquinas, fazer o processo de instalação de programas e sistemas complexos ou até mesmo facilitar o funcionamento de aplicações, utilizando a interface nativa do Shell, ao invés de precisar implementar soluções novas para interagir com as chamadas de sistema.</p>
+                </div>
+                <div id="programas">
+                    <h3>Programas, pacotes e gerenciadores de pacotes</h3>
+                    <p>Como citado antes, podemos escrever nossos próprios programas para extender as capacidades do Shell, mas também podemos instalar programas usando gerenciador de pacotes. Esses programas são normalmente associados a configuração do sistema de tal forma que podemos executá-los pelo Shell como se fossem comandos do Shell.</p>
+                    <p>Um exemplo é o programa cowsay, que permite escrever mensagens como diálogos de uma vaca. Completamente inútil não é? Mas isso é muito mais legal que clicar em janelas.. talvez.. eu acho...</p>
+                    <p>Afinal, qual motivação em aprender o Shell se não algo assim?</p>
+                    <p>Mas para saber mais sobre isso, precisamos de um artigo especial para falar de Linux, Distros e como fazer coisas na sua distro favorita.</p>
+                    
+
+                    <div class="picture">
+                        <img src="resources/gotta_move.jpg" style="object-fit:contain">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 by Gabriel Carvalho Silva</p>
+    </footer>
+</body>
+
+    <script>hljs.highlightAll();</script>
+</html>
