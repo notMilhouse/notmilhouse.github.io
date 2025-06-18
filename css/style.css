@@ -141,7 +141,7 @@ header {
 }
 
 ol {
-    list-style-type: lower-alpha;
+    list-style-type: lower-decimal;
 }
 
 ol li {
