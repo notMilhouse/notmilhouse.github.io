@@ -1,19 +1,22 @@
 :root {
-    --main-bg-color: #ebebeb;
-    --main-highlight-color: #674ea7;
-    --main-text-color: #2e2150;
+    --main-bg-color: #0b0b0b;
+    --main-highlight-color: #9f52ac;
+    --main-text-color: #D1C8F1;
     --secondary-highlight-color: #836eb8;
   }
   
 
 html, body{
-    font-family: 'Fira Mono', sans-serif;
+    font-family: 'Lexend', sans-serif;
     /*using vh doesnt allow for proper zooming, how the fuck to do this properly
     using px also breaks the layout due to some weird grid shit*/
     font-size: 2vh;
-    
     background-color: var(--main-bg-color);
     text-align: left;
+    p, i, b, li {
+
+    	color: var(--main-text-color);
+    }
 }
 
 h1{
@@ -45,7 +48,6 @@ h4{
 
 p {
     font-size: 1rem;
-    color: var(--main-text-color);
     padding: 0.5rem 0 1rem 0;
 }
 
@@ -124,12 +126,13 @@ header {
 }
 
 .text {
-    max-width: 80ch;
+    max-width: 60ch;
     line-height: 4vh;
+    text-align: justify;
 }
 
 .picture {
-    width: 50vw;
+    width: 60ch;
     height: 20vw;
     padding: 0.5rem 0 0.5rem 0;
 }
