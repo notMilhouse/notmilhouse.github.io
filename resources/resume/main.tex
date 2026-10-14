@@ -1,0 +1,194 @@
+\documentclass[letterpaper,11pt]{article}
+
+% Required Packages
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{geometry}
+\usepackage{fontawesome5}
+
+% Set font to Sans Serif
+\renewcommand{\familydefault}{\sfdefault}
+
+% Adjust margins
+\geometry{left=0.6in, top=0.6in, right=0.6in, bottom=0.6in}
+
+% Custom section formatting
+\titleformat{\section}{
+  \vspace{-2pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-2pt}]
+
+% Ensure PDF is machine readable/ATS parsable
+\pdfgentounicode=1
+
+% Custom commands for formatting
+\newcommand{\resumeItem}[1]{
+  \item\small{#1}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{#3} & \textit{#4} \\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeSubheadingTwo}[2]{
+  \vspace{1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+  \vspace{1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small\textbf{#1} & #2 \\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    {\Huge \textbf{Gabriel Carvalho Silva}} \\ \vspace{6pt}
+    \small
+    \faGlobe\ \href{https://umgabrielcarvalho.me}{\underline{umgabrielcarvalho.me}} $|$ 
+    \faEnvelope\ \href{mailto:umgabrielcarvalho@gmail.com}{\underline{umgabrielcarvalho@gmail.com}} $|$ 
+    \faLinkedin\ \href{https://linkedin.com/in/umgabrielcarvalho}{\underline{in/umgabrielcarvalho}} \\ \vspace{4pt}
+    \textbf{Spoken Languages:} English (Fluent, C2 Level), Portuguese (Native)
+\end{center}
+
+%-----------PROFESSIONAL SUMMARY-----------
+\section{Professional Summary}
+\vspace{4pt}
+\small{Software Engineer with 5 years of experience developing high-performance solutions. Prooven experience in Java and Kotlin ecosystems, Microservices, and Legacy Modernization. Proven track record of bridging the gap between complex technical implementation and business requirements, ensuring resilience, security, and operational excellence in fast-paced environments.}
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+\vspace{2pt}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item \textbf{Languages}{: Kotlin, Java, Python, SQL, Shell Scripting, Golang}}
+    \small{\item \textbf{Architecture \& Design}{: Microservices, Domain-Driven Design (DDD), Event-Driven Architecture, SOLID, Database Evolution, REST API Design}}
+    \small{\item \textbf{Frameworks \& Testing}{: Spring Boot, Dropwizard, Hibernate/JPA, JUnit, Mockito, FastAPI}}
+    \small{\item \textbf{Infra \& Observability}{: AWS, Kafka, MQTT, Docker, Kubernetes, AWS, Grafana, CI/CD Pipelines (e.g. GitHub Actions and Gitlab CI/CD)}}
+    \small{\item \textbf{Databases}{: PostgreSQL, MySQL, ScyllaDB, Redis, Flyway}}
+\end{itemize}
+
+%-----------PROFESSIONAL EXPERIENCE-----------
+\section{Professional Experience}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    
+    \resumeSubheading
+        {Software Engineer}{Mar 2026 -- Present}
+        {ClassPass - Remote}{}
+        \begin{itemize}[leftmargin=0.25in, label=\textbullet, itemsep=2pt]
+            \resumeItem{\textbf{Architecture \& Legacy Modernization:} Spearheaded the refactoring of legacy flows to support multi-tenant architectures, enabling the seamless reuse of core business logic across diverse data shapes within a Kotlin microservices ecosystem.}
+            \resumeItem{\textbf{Event-Driven Systems:} Architected and implemented complex asynchronous workflows using Event-Driven Architecture (AWS SQS/SNS), delivering a highly configurable cancellation policy engine (handling both user and venue rules) and pass-based booking resolutions.}
+            \resumeItem{\textbf{Domain-Driven Design (DDD):} Restructured Protobuf service contracts applying DDD and the Open-Closed Principle, significantly improving cross-team maintainability, extensibility, and interface clarity.}
+            \resumeItem{\textbf{Data Integration:} Engineered robust tracking and Business Intelligence (BI) integration pipelines, effectively bridging transactional microservices with analytical data layers.}
+            \resumeItem{\textbf{Technical Leadership \& Culture:} Accelerated ramp-up time by 50\% to take ownership of end-to-end technical designs and squad coordination. Fostered engineering excellence by leading design discussions, driving bug bashes, and organizing technical book clubs.}
+            \resumeItem{\textbf{Tech Stack:} Kotlin, Dropwizard, PostgreSQL, AWS (SQS/SNS), Protobuf, Microservices}
+        \end{itemize}
+
+    \resumeSubheading
+        {Application Engineer}{Oct 2024 -- Mar 2026}
+        {Foretellix - Remote}{}
+        \begin{itemize}[leftmargin=0.25in, label=\textbullet, itemsep=2pt]
+            \resumeItem{\textbf{Lead Technical Integration:} Orchestrated the design and deployment of custom data integration infrastructures for enterprise clients (Toyota, Nvidia), translating high-level business requirements into technical architectural specifications.}
+            \resumeItem{\textbf{Cloud Infrastructure Architecture:} Designed scalable execution environments on AWS, integrating industry-standard platforms (e.g., Carla) with proprietary software to ensure high availability.}
+            \resumeItem{\textbf{Automation \& Tooling:} Developed a custom OpenDRIVE (.xodr) map manipulation API (DOM-like structure) and automation scripts, accelerating map editing workflows and enabling programmatic querying of map elements.}
+            \resumeItem{\textbf{Cross-Functional Collaboration:} Acted as the primary technical liaison between internal engineering teams and external business stakeholders, conducting impact assessments and aligning technical delivery with client timelines.}
+            \resumeItem{\textbf{Tech Stack:} ASAM OpenScenario 2, C++, Python, Shell, AWS, React, Kotlin}
+        \end{itemize}
+
+    \resumeSubheading
+        {Software Engineer Intern}{Feb 2021 -- Jan 2023}
+        {iFood - Financial Services Tribe $|$ Remote}{}
+        \begin{itemize}[leftmargin=0.25in, label=\textbullet, itemsep=2pt]
+            \resumeItem{\textbf{Legacy Modernization:} Contributed to the architectural transformation of legacy payment microservices into modern, resilient Kotlin/Spring Boot applications, enhancing scalability without disrupting business operations.}
+            \resumeItem{\textbf{Resilient Architecture \& Scale:} Designed fault-tolerant, event-driven financial systems using Kafka, ensuring data consistency and processing millions of daily transactions with low latency.}
+            \resumeItem{\textbf{Database Evolution:} Managed database evolution strategies using Flyway and PostgreSQL/ScyllaDB, ensuring zero-downtime migrations for high-volume datasets.}
+            \resumeItem{\textbf{Internal Tooling \& Standards:} Developed a shared error-handling library (DSL) adopted across the platform to standardize user feedback, conducting code reviews to ensure adoption and maintainability.}
+            \resumeItem{\textbf{Observability:} Integrated observability tools (Datadog/Grafana) to monitor system health, significantly reducing mean-time-to-resolution (MTTR) for payment failures.}
+            \resumeItem{\textbf{Tech Stack:} Kotlin, Java, Spring Boot, Kafka, AWS, PostgreSQL, ScyllaDB, Redis, Go (Golang)}
+        \end{itemize}
+\iffalse
+    \resumeSubheading
+        {Data Engineer Intern}{May 2024 -- Oct 2024}
+        {IEA - USP RP $|$ Ribeirão Preto, Brazil}{}
+        \begin{itemize}[leftmargin=0.25in, label=\textbullet, itemsep=2pt]
+            \resumeItem{\textbf{Database Architecture Optimization:} Redesigned and normalized (and de-normalized for performance) complex database schemas, optimizing query algorithms to reduce execution time by 99\% (from 5+ minutes to under 2 seconds) through advanced indexing and architectural refactoring.}
+            \resumeItem{\textbf{Cost-Optimized Infrastructure:} Provisioned and secured an on-premises Linux server using repurposed hardware, enabling the hosting of critical visualization services and CI/CD pipelines under strict budget constraints.}
+            \resumeItem{Built robust custom dashboards for educational data visualization and insights using Python and R.}
+            \resumeItem{\textbf{Tech Stack:} Linux, Python, R, PostgreSQL, Docker, CI/CD}
+        \end{itemize}
+
+    \resumeSubheading
+        {Data Engineer Intern}{Aug 2023 -- Feb 2024}
+        {BRICS - TU Braunschweig $|$ Germany}{}
+        \begin{itemize}[leftmargin=0.25in, label=\textbullet, itemsep=2pt]
+            \resumeItem{\textbf{DSL Development \& Abstraction:} Engineered a Python-based Domain-Specific Language (DSL) to encapsulate complex domain logic, empowering non-technical researchers to independently execute scalable data analysis tests.}
+            \resumeItem{\textbf{Tech Stack:} Python, Pandas}
+        \end{itemize}
+
+    \resumeSubheading
+        {Full Stack Developer Intern}{Aug 2023 -- Feb 2024}
+        {PLRI - TU Braunschweig $|$ Germany}{}
+        \begin{itemize}[leftmargin=0.25in, label=\textbullet, itemsep=2pt]
+            \resumeItem{Developed full-stack application with Python (FastAPI) backend, PostgreSQL database, Vue.js web frontend, and Android app for AI-aided horseshoe image diagnosis.}
+            \resumeItem{\textbf{Tech Stack:} Python, PostgreSQL, JavaScript, Vue.js, FastAPI, Android}
+        \end{itemize}
+\fi
+\end{itemize}
+
+%-----------KEY PROJECTS-----------
+\section{Key Projects}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \resumeSubheading
+        {Bachelor Thesis - IoT Smart Scale Architecture}{Aug 2025 -- Dec 2025}
+        {USP $|$ Hybrid}{}
+        \begin{itemize}[leftmargin=0.25in, label=\textbullet, itemsep=2pt]
+            \resumeItem{\textbf{End-to-End System Design:} Architected a complete IoT solution applying Domain-Driven Design (DDD) and Hexagonal Architecture principles to ensure decoupling and testability.}
+            \resumeItem{\textbf{Implementation:} Developed an MQTT broker for real-time device communication, integrated with a Spring Boot/Kotlin backend, SQL database, and embedded face recognition using TensorFlow Lite models.}
+            \resumeItem{\textbf{Tech Stack:} ESP32, Mosquitto (MQTT), Kotlin, PostgreSQL, Spring Boot, Docker, React, TensorFlow}
+        \end{itemize}
+\end{itemize}
+
+%-----------EDUCATION & LEADERSHIP-----------
+\section{Education \& Leadership}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \resumeSubheading
+        {Universidade de São Paulo (USP)}{Mar 2020 -- Dec 2025}
+        {Bachelor of Computer Science}{}
+    
+    \resumeSubheading
+        {Technische Universität Braunschweig - Germany}{Mar 2023 -- Mar 2024}
+        {Exchange Student}{}
+    
+    \resumeSubheadingTwo
+        {Leadership}{}
+        \begin{itemize}[leftmargin=0.25in, label=\textbullet, itemsep=2pt]
+            \resumeItem{Octobit Junior - Head of Projects (2024-2025)}
+            \resumeItem{Computer Science Week - Head Director (2020-2021)}
+        \end{itemize}
+\end{itemize}
+
+%-----------CERTIFICATIONS & REFERENCES-----------
+\section{Certifications \& References}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item \textbf{Certifications:} TOEFL iBT Score: 113/120 $|$ High School Programming Competition: 2nd Place}
+    \small{\item \textbf{References:} 
+        \begin{itemize}[leftmargin=0.15in, label=\textbullet]
+            \item Mr. Cristiano Hahn - Senior Software Engineer @ iFood - cristianohahn.contato@gmail.com
+            \item Mr. Danilo de Luca - Senior Software Engineer @ Classpass - https://www.linkedin.com/in/danilopereiradeluca
+            \item Mr. Mohamed Fasil Ahamed - Application Engineering Manager @ Foretellix - https://www.linkedin.com/in/mohamed-fasil-syed-ahamed-7a146789/
+            \item Mr. Gianmarco Macaro - Application Engineering Director @ Foretellix - https://www.linkedin.com/in/gianmarco-macaro-a213367b/
+        \end{itemize}
+    }
+\end{itemize}
+
+\end{document}
